@@ -1,6 +1,5 @@
 import React from 'react'
 import './login.css'
-import loginLogo from '../../assets/dark-blue-logo.svg'
 import { useFormik } from 'formik'
 import { loginSchema } from '../../Validations/loginValidation'
 import { Link } from 'react-router-dom'
@@ -9,6 +8,7 @@ export const Login = () => {
   const onSubmit = () =>{
     (false?window.alert("Login Sucess"):window.alert("Login Failed"))
   }
+  
   const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
     initialValues:{
       email:"",
@@ -22,7 +22,7 @@ export const Login = () => {
   return (
     <div className='login-container'>
       <div className="login-logo">
-        <img src={loginLogo} alt='SecureRIA'></img>
+        <div className='logo-image'></div>
       </div>
       <div className="login-box">
         <div className="login-prompt">
@@ -57,7 +57,7 @@ export const Login = () => {
                   Forgot Password?
                 </div>
                 <div className="login-button">
-                  <button type='submit'>LOGIN</button>
+                <Link to='/dashboard' className='link'><button type='submit'>LOGIN</button></Link>
                 </div>
               </form>
           </div>

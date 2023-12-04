@@ -1,0 +1,261 @@
+.main-interface {
+    width: 100%;
+    display: flex;
+}
+
+.sidebar {
+    z-index: 1;
+}
+
+.campaign-container {
+    width: 100%;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+    background-color: var(--button_color);
+    box-shadow: 0px 4px 10px 0px #00000040;
+
+}
+
+.center-box {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-text h1 {
+    color: white;
+    font-size: 20px;
+}
+
+.right-content {
+    display: flex;
+    align-items: center;
+}
+
+.email-text h3 {
+    font-size: 15px;
+    font-weight: 100;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.email-text p {
+    font-size: 10px;
+    font-weight: 100;
+    color: white;
+}
+
+.arrow-icon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.campaign-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.campaign-center {
+    width: 90%;
+}
+
+/* EMAIL HEADING STARTS */
+
+.campaign-heading {
+    margin-top: 40px;
+}
+
+.campaign-heading h1 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: var(--primary_color);
+}
+
+.campaign-heading p {
+    font-size: 10px;
+}
+
+/* FORM STARTS HERE */
+
+.campaign-form-box {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-left {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.form-right {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+label {
+    font-size: 14px;
+    color: var(--primary_color);
+    font-weight: 700;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+input[type='text'] {
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--primary_color);
+}
+
+
+.input-select {
+    appearance: none;
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--primary_color);
+    color:grey;
+}
+
+
+input[type='text']:focus {
+    border-width: 1px;
+    border-color: var(--button_color);
+    outline: none;
+}
+
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    margin-top:4px;
+}
+
+.datetime-container{
+    display:flex;
+    justify-content: space-between;
+}
+
+input[type='date']{
+    width:90%;
+    padding: 12px 5px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--primary_color);
+}
+
+input[type='time']{
+    width:100%;
+    padding: 10px 5px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--primary_color);
+}
+
+.checkbox-container{
+    display:flex;
+    justify-content: flex-start;
+    gap:10px;
+    align-items: top;
+    margin:10px 0;
+}
+
+select option{ 
+    color: black;
+}
+
+.option-text p{
+    font-size:10px;
+    color:var(--primary_color)
+}
+.option-text h5{
+    margin-top:2px;
+    font-size:14px;
+    font-weight:100;
+}
+
+.arrow-relative{
+    position:relative;
+}
+
+
+.icon-container img{
+    position:absolute;
+    width:10px;
+    height:10px;
+    right:10px;
+    margin-top:-33px;
+}
+
+.date-button-containter {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.now-button {
+    padding: 10px 40px;
+    background-color: white;
+    border-radius: 5px;
+    background-color: var(--primary_color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.date-time-button {
+    padding: 10px 40px;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: white;
+    border-color: var(--primary_color);
+    color: var(--primary_color);
+    cursor: pointer;
+}
+
+/* LOWER BUTTON STARTS HERE */
+
+.form-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.left-button {
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: var(--primary_color);
+    padding: 10px 20px;
+    background-color: white;
+    color: var(--primary_color);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.right-button {
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--primary_color);
+    color: white;
+    cursor: pointer;
+}

@@ -8,17 +8,22 @@
 :root{
     --primary_color:#0473E9;
     --secondary_color:#E6F2FF;
-    --button_color:#0473E9;
+    --button_color:#293363;
+    --background_image: url(./assets/dark-blue-logo.svg)
 }
 
 [data-theme='red']{
     --primary_color:#890606;
     --secondary_color:#FFEEEE;
     --button_color:#890606;
+    --background_image: url(./assets/red-grey-logo.svg)
 }
 
 [data-theme='grey']{
     --primary_color:#0473E9;
-    --secondary_color:#5C6670;
-    --button_color:#5C6670;
+    --secondary_color:#E6F2FF;
+    --button_color:#293363;
+    --background_image: url(./assets/blue-grey-logo.svg);
+    --grey_button_color:#5C6670;
+
 }

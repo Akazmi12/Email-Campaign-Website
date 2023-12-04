@@ -4,19 +4,23 @@ import { Link } from 'react-router-dom'
 import navLogo from '../../assets/dark-blue-logo.svg'
 export const Navbar = () => {
   return (
-    <nav className="navbar-container">
-      <div className="navbar-logo">
-        <img src={navLogo} alt='SecureRIA'></img>
-      </div>
+    <div className="navbar-fixed-position">
+      <nav className="navbar-container">
+        <div className="navbar-logo">
+          {/* <img src={navLogo} alt='SecureRIA'></img> */}
+          <div className='logo-image'></div>
+        </div>
         <ul className='nav-links'>
           <li><Link to='/dashboard'>Dashboard</Link></li>
-          <li><Link to='/'>New Email Campaign</Link></li>
-          <li><Link to='/'>Targets</Link></li>
-          <li><Link to='/'>Email Template</Link></li>
-          <li><Link to='/'>Landing Page Template</Link></li>
-          <li><Link to='/'>Campaigns Running</Link></li>
-          <li><Link to='/'>Reporting</Link></li>
+          <li><Link to='/newcampaign'>New Email Campaign</Link></li>
+          <li><Link to='/target'>Targets</Link></li>
+          <li><Link to='/emailtemplate'>Email Template</Link></li>
+          <li><Link to='/landingtemplate'>Landing Page Template</Link></li>
+          <li><Link to='/activecampaign'>Campaigns Running</Link></li>
+          <li><Link to='/reporting'>Reporting</Link></li>
         </ul>
-    </nav>
+        <Link to='/'><button>Log Out</button></Link>
+      </nav>
+    </div>
   )
 }

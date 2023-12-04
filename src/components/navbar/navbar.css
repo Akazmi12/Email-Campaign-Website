@@ -1,19 +1,27 @@
+.navbar-fixed-position{
+    width:280px;
+    background-color: white;
+}
+
 .navbar-container{
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width:280px;
-    height:100vh;
+    height:100%;
     box-shadow: 0px 4px 10px 0px #00000040;
-
+    background-color: white;
+    position: fixed;
 }
 
 .navbar-logo{
     padding:20px 10px;
 }
-.navbar-logo img{
+.logo-image{
     width:200px;
+    height:56px;
+    background-image:var(--background_image);
 }
 
 .nav-links{
@@ -26,7 +34,7 @@
 }
 
 li{
-    margin:15px 0px 15px 25px;
+    margin:20px 0px 20px 25px;
 }
 
 li > a{
@@ -34,4 +42,16 @@ li > a{
     font-weight: 400;
     color:black;
     font-size:14px;
+}
+
+.navbar-container button{
+    color:white;
+    border:none;
+    padding:15px 50px;
+    font-size:20px;
+    font-weight: 700;
+    border-radius:5px;
+    margin-top:40px;
+    background-color: var(--button_color);
+    cursor:pointer;
 }
