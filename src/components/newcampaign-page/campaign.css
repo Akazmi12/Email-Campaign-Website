@@ -259,3 +259,26 @@ select option{
     color: white;
     cursor: pointer;
 }
+
+
+@media screen and (max-width:1000px) {
+    .form-buttons{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .left-button{
+        width:90%;
+        height:40px;
+        padding:0;
+    }
+    .right-button{
+        width:90%;
+        height:40px;
+        padding:0;
+    }
+    .campaign-form-box{
+        flex-direction: column;
+        align-items: center;
+    }
+}
