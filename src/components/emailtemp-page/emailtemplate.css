@@ -145,5 +145,11 @@ button{
     .template-detail{
         margin-bottom:-15px;
     }
+    .template-box{
+        width:100% !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+
+    }
     
 }
