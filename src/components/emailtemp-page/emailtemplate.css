@@ -142,5 +142,8 @@ button{
         justify-content: center;
         align-items: center;
     }
+    .template-detail{
+        margin-bottom:-15px;
+    }
     
 }
