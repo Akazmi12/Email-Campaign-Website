@@ -228,7 +228,7 @@ export const Campaign = (props) => {
                                             <input type='date' name="date" defaultValue="" id="Date" onBlur={handleChange}></input>
                                             {
                                                 err.date.length > 0 &&
-                                                <span style={{ color: "red", fontSize: "12px" }}>{err.date}</span>
+                                                <span style={{ color: "red", fontSize: "12px" ,display:"block"}}>{err.date}</span>
 
                                             }
                                         </div>
