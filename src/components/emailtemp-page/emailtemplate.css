@@ -122,3 +122,25 @@ button{
     gap:20px
 }
 
+
+@media screen and (max-width:1200px) {
+    .template-bottom{
+        width:90%;
+        justify-content: center !important;
+    }
+    .target-heading{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+    }
+    
+}
+
+@media screen and (max-width:550px) {
+    .template-box-container{
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

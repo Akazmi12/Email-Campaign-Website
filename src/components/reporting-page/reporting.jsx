@@ -1,23 +1,25 @@
 import React from 'react'
-import { Navbar } from '../navbar/navbar'
+import Hoc from '../hoc/hoc'
 import arrowDown from '../../assets/arrow-icon.svg'
 import userDp from '../../assets/user-dp.svg'
+import menuBar from '../../assets/menu-bar.svg'
 import './reporting.css'
 
-export const Reporting = () => {
+
+const Reporting = (props) => {
     return (
         <div className="main-interface">
-            <div className='sidebar'>
-                <Navbar />
-            </div>
             <div className="campaign-container">
                 <div className='top-bar'>
                     <div className='center-box'>
                         <div className="left-text">
-                            <h1>Dashboard | Reporting</h1>
+                            <div className="menu-button">
+                                <img src={menuBar} onClick={props.func} className='menu-bars' />
+                                <h1>Dashboard | Reporting</h1>
+                            </div>
                         </div>
                         <div className="right-content">
-                            <img src={userDp} alt=''></img>
+                            <img className="profile-img" src={userDp} alt=''></img>
                             <div className="email-text">
                                 <h3>Jenny Wilson</h3>
                                 <p>jennywilson@gmail.com</p>
@@ -38,3 +40,5 @@ export const Reporting = () => {
         </div>
     )
 }
+
+export default Hoc(Reporting);

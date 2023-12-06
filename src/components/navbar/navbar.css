@@ -17,6 +17,10 @@
 
 .navbar-logo{
     padding:20px 10px;
+    position:relative;
+}
+.menu-icon{
+    display:none;
 }
 .logo-image{
     width:200px;
@@ -54,4 +58,16 @@ li > a{
     margin-top:40px;
     background-color: var(--button_color);
     cursor:pointer;
+}
+
+@media screen and (max-width:1200px) {
+    .menu-icon{
+        display: block;
+        width:20px;
+        position:absolute;
+        right:-20px;
+        margin-top:-10px;
+        border:1px solid grey;
+        border-radius:10px;
+    }    
 }

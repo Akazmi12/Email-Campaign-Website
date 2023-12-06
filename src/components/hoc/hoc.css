@@ -1,0 +1,20 @@
+.slider{
+    width:fit-content;
+    z-index: 1200;
+    position:static;
+    left:0px;
+    transition: .45s;
+}
+
+
+@media screen and (max-width:1200px) {
+    
+    .slider{
+        width:fit-content;
+        z-index: 1200;
+        position:absolute;
+        left:-300px;
+        transition: .45s;
+    }
+}
+

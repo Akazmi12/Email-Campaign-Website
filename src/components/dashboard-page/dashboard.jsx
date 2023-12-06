@@ -1,26 +1,29 @@
 import React from 'react'
-import './dashboard.css'
 import userDp from '../../assets/user-dp.svg'
 import arrowDown from '../../assets/arrow-icon.svg'
 import addImg from '../../assets/address-image.svg'
 import rArrow from '../../assets/right-arrow.svg'
-import tableData from './tabledata.json'
-import { Navbar } from '../navbar/navbar'
+import menuBar from '../../assets/menu-bar.svg'
+import Hoc from '../hoc/hoc'
 
-export const Dashboard = () => {
+import tableData from './tabledata.json'
+import './dashboard.css'
+import Table from './table'
+
+const Dashboard = (props) => {
   return (
     <div className="main-interface">
-      <div className='sidebar'>
-        <Navbar />
-      </div>
       <div className="dashboard-container">
         <div className='top-bar'>
           <div className='center-box'>
             <div className="left-text">
-              <h1>Dashboard</h1>
+              <div className="menu-button">
+                <img src={menuBar} onClick={props.func} className='menu-bars'/>
+                <h1>Dashboard</h1>
+              </div>
             </div>
             <div className="right-content">
-              <img src={userDp} alt=''></img>
+              <img className="profile-img" src={userDp} alt=''></img>
               <div className="email-text">
                 <h3>Jenny Wilson</h3>
                 <p>jennywilson@gmail.com</p>
@@ -70,42 +73,12 @@ export const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className='table-container'>
-              <div className="table-text">
-                <h1>Campaigns Running</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-              </div>
-              <div className="table-section">
-                <table className='table-tag'>
-                  <thead>
-                    <tr>
-                      <th>Sent Date</th>
-                      <th>Name</th>
-                      <th>Open</th>
-                      <th>Internal Clicks</th>
-                      <th>Time Opened</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {tableData.map((dataLine, index) => (
-                      <tr key={index} className={index % 2 === 0 ? "even" : ""}>
-                        <td>{dataLine.SentDate}</td>
-                        <td>{dataLine.Name}</td>
-                        <td>{dataLine.Open}</td>
-                        <td>{dataLine.InClicks}</td>
-                        <td>{dataLine.TimeOpened}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <div className="table-button">
-                <button>View All</button>
-              </div>
-            </div>
+            <Table tableData={tableData} />
           </div>
         </div>
       </div>
     </div>
   )
 }
+
+export default Hoc(Dashboard);

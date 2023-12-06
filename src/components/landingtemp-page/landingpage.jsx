@@ -2,22 +2,24 @@ import React from 'react'
 import './landingpage.css'
 import userDp from '../../assets/user-dp.svg'
 import arrowDown from '../../assets/arrow-icon.svg'
-import { Navbar } from '../navbar/navbar'
+import menuBar from '../../assets/menu-bar.svg'
 
-export const LandingPage = () => {
+import Hoc from '../hoc/hoc'
+
+const LandingPage = (props) => {
     return (
         <div className="main-interface">
-            <div className='sidebar'>
-                <Navbar />
-            </div>
             <div className="dashboard-container">
                 <div className='top-bar'>
                     <div className='center-box'>
                         <div className="left-text">
-                            <h1>Landing Page Templates</h1>
+                            <div className="menu-button">
+                                <img src={menuBar} onClick={props.func} className='menu-bars' />
+                                <h1>Landing Page Templates</h1>
+                            </div>
                         </div>
                         <div className="right-content">
-                            <img src={userDp} alt=''></img>
+                            <img className="profile-img" src={userDp} alt=''></img>
                             <div className="email-text">
                                 <h3>Jenny Wilson</h3>
                                 <p>jennywilson@gmail.com</p>
@@ -134,3 +136,6 @@ export const LandingPage = () => {
         </div>
     )
 }
+
+
+export default Hoc(LandingPage);
